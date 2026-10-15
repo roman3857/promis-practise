@@ -1,28 +1,53 @@
-const isSuccsed = true;
+// const isSuccsed = true;
 
-const myPromise = new Promise((result, reject) => {
-  setTimeout(() => {
-    if (isSuccsed) {
-      result(5);
-    } else {
-      reject("error - 404");
-    }
-  }, 2000);
-});
+// const myPromise = new Promise((result, reject) => {
+//   setTimeout(() => {
+//     if (isSuccsed) {
+//       result(5);
+//     } else {
+//       reject("error - 404");
+//     }
+//   }, 2000);
+// });
 
-myPromise
-  .then((result) => {
-    console.log(result);
-    return result * 2;
-  })
-  .then((result) => {
-      console.log(result);
-      return result + 10
-  })
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((error) => {
-    console.log(error);
-  })
-  .finally(console.log("delete spiner"));
+// myPromise
+//   .then((result) => {
+//     console.log(result);
+//     return result * 2;
+//   })
+//   .then((result) => {
+//       console.log(result);
+//       return result + 10
+//   })
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+//   .finally(console.log("delete spiner"));
+
+
+
+
+// practice
+/**
+  Випадковий проміс
+ Створіть функцію randomPromise, яка повертає проміс, 
+який випадковим чином виконується або відхиляється.
+ Використайте метод then, щоб обробити виконання проміса та 
+вивести повідомлення "Проміс виконано".
+ Використайте метод catch, щоб обробити помилку, якщо 
+проміс відхиляється, і вивести повідомлення "Помилка проміса".
+ Використайте метод finally для виведення повідомлення
+"Робота з промісом завершена" незалежно від того, чи було виконання успішним, чи виникла помилка.
+  Послідовний проміс
+ Створіть функцію getRandomNumber, яка повертає проміс, 
+що генерує випадкове число.
+ Використайте метод then, щоб обробити результат першого проміса, 
+додати до нього число 10 та вивести результат.
+ Використайте метод catch, щоб обробити помилки у будь-якому 
+з промісів та вивести повідомлення "Помилка проміса".
+ Використайте метод finally для виведення повідомлення 
+"Робота з промісом завершена" незалежно від того, чи було виконання успішним, чи виникла помилка.
+ */
